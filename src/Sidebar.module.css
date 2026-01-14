@@ -4,9 +4,9 @@
   box-sizing: border-box;
   width: 60px;
   
-  /* FIX: Use Dynamic Viewport Height to stop jumping on mobile scroll */
-  height: 100vh; /* Fallback for older browsers */
-  height: 100dvh; 
+  /* FIX: Use 100svh (Smallest Viewport Height) to lock height and prevent resizing jumps */
+  height: 100vh; /* Fallback */
+  height: 100svh; 
   
   /* Gradient using Primary -> Secondary colors */
   background: linear-gradient(180deg, var(--accent-color) 0%, var(--secondary-color) 100%);
@@ -26,8 +26,9 @@
   box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
   
-  /* FIX: Prevent scroll chaining to the body */
-  overscroll-behavior: contain;
+  /* FIX: Locks scroll and gestures so the browser doesn't try to hide the URL bar */
+  overscroll-behavior: none;
+  touch-action: none;
 }
 
 .logoContainer {
