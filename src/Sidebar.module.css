@@ -3,8 +3,10 @@
 .sidebar {
   box-sizing: border-box;
   width: 60px;
-  height: 100vh;
-  height: 100dvh;
+  
+  /* FIX: Use Dynamic Viewport Height to stop jumping on mobile scroll */
+  height: 100vh; /* Fallback for older browsers */
+  height: 100dvh; 
   
   /* Gradient using Primary -> Secondary colors */
   background: linear-gradient(180deg, var(--accent-color) 0%, var(--secondary-color) 100%);
@@ -23,6 +25,9 @@
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 5px 0 25px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
+  
+  /* FIX: Prevent scroll chaining to the body */
+  overscroll-behavior: contain;
 }
 
 .logoContainer {
@@ -30,7 +35,7 @@
   padding: 10px;
   transition: transform 0.2s;
   
-  /* FIX: Shadow for Logo Image so it shows on white backgrounds */
+  /* Shadow for Logo Image so it shows on white backgrounds */
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
 }
 
@@ -55,7 +60,7 @@
   background: none;
   border: none;
   
-  /* FIX: Brighter text + Strong Shadow for visibility */
+  /* Brighter text + Strong Shadow for visibility */
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
   
@@ -83,7 +88,7 @@
   color: #ffffff;
   font-weight: 800;
   
-  /* FIX: Strong shadow for the active text */
+  /* Strong shadow for the active text */
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -93,7 +98,7 @@
   background-color: white;
   border-radius: 50%;
   
-  /* FIX: Shadow for the dot so it's visible on white */
+  /* Shadow for the dot so it's visible on white */
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
 }
 
@@ -106,10 +111,10 @@
 .controlItem { position: relative; display: flex; justify-content: center; }
 
 .iconBtn {
-  background: rgba(255, 255, 255, 0.1); /* Slight background for better contrast */
+  background: rgba(255, 255, 255, 0.1); 
   border: none;
   
-  /* FIX: Brighter Icon + Shadow */
+  /* Brighter Icon + Shadow */
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   
@@ -122,6 +127,25 @@
 .iconBtn:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.1);
+}
+
+/* Badge Style */
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4757;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-shadow: none; 
 }
 
 .searchPopup {
@@ -147,21 +171,3 @@
 :global(body.rtl) .sidebar { left: auto; right: 0; border-right: none; border-left: 1px solid rgba(255,255,255,0.1); }
 :global(body.rtl) .searchPopup { left: auto; right: 45px; }
 @media (min-width: 769px) { :global(body.rtl) .searchPopup { right: 55px; } }
-
-.badge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #ff4757;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  text-shadow: none;
-}

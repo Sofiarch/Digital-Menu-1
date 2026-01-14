@@ -29,7 +29,8 @@ export const MENU_ITEMS = [
     price: 12,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=60"
   },
 
   // 2. Pepperoni Passion
@@ -43,7 +44,8 @@ export const MENU_ITEMS = [
     price: 15,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=500&q=60"
   },
 
   // 3. Truffle Mushroom
@@ -57,7 +59,8 @@ export const MENU_ITEMS = [
     price: 18,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60"
   },
 
   // 4. BBQ Chicken Legend
@@ -71,7 +74,8 @@ export const MENU_ITEMS = [
     price: 16,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=60"
   },
 
   // 5. Veggie Supreme
@@ -85,7 +89,8 @@ export const MENU_ITEMS = [
     price: 14,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=500&q=60"
   },
 
   // 6. Spicy Mexicano
@@ -99,6 +104,7 @@ export const MENU_ITEMS = [
     price: 17,
     category: "FOOD",
     subCategory: "PIZZA",
-    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80"
+    // Optimized: w=500, q=60
+    image: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=500&q=60"
   }
 ];
