@@ -70,12 +70,18 @@ function Checkout({ cart, updateCartQty, removeFromCart, clearCart, backToMenu, 
   return (
     <div className={styles.checkoutPage}>
       <div className={styles.header}>
-        <button onClick={backToMenu} className={styles.backBtn}>← {t.back}</button>
+        <button onClick={backToMenu} className={styles.backBtn}>
+          {/* FIX: Use Icons and conditional logic instead of CSS flip */}
+          <span className="material-icons">
+            {lang === 'ar' ? 'arrow_forward' : 'arrow_back'}
+          </span>
+          {t.back}
+        </button>
         <h1>{t.title}</h1>
       </div>
 
       <div className={styles.layout}>
-        {}
+        {/* CART SECTION */}
         <div className={styles.cartSection}>
           <h2>{t.summary}</h2>
           {cart.length === 0 ? (

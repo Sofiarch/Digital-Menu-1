@@ -30,7 +30,15 @@
   cursor: pointer;
   font-weight: bold;
   white-space: nowrap;
+  
+  /* Flex ensures icon and text align nicely */
+  display: flex;
+  align-items: center;
+  gap: 8px; 
 }
+
+/* DELETED: The RTL transform that mirrored the text is gone */
+/* :global(body.rtl) .backBtn { transform: scaleX(-1); display: inline-block; } */
 
 .layout {
   display: grid;
@@ -210,7 +218,7 @@
 }
 
 /* RTL Support */
-:global(body.rtl) .backBtn { transform: scaleX(-1); display: inline-block; }
+/* Removed the backBtn flip. Only keeping image flip if needed */
 :global(body.rtl) .cartItem img { margin-right: 0; margin-left: 15px; }
 
 /* MOBILE RESPONSIVE */

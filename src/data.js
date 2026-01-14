@@ -18,22 +18,7 @@ export const CATEGORY_TRANSLATIONS = {
 };
 
 export const MENU_ITEMS = [
-  // 1. Original Classic
-  {
-    id: 1,
-    name: { en: "Classic Margherita", ar: "مارغريتا كلاسيك" },
-    description: { 
-      en: "Fresh mozzarella, basil leaves, and our signature tomato sauce.", 
-      ar: "جبن الموزاريلا الطازج، أوراق الريحان، وصوص الطماطم الخاص بنا." 
-    },
-    price: 12,
-    category: "FOOD",
-    subCategory: "PIZZA",
-    // Optimized: w=500, q=60
-    image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=60"
-  },
-
-  // 2. Pepperoni Passion
+  
   {
     id: 2,
     name: { en: "Pepperoni Passion", ar: "عشاق البيبروني" },
